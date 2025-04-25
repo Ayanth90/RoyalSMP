@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Royal SMP</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      color: #ffffff;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin-top: 40px;
+      color: #ffffff;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+
+    .btn {
+      display: block;
+      margin: 20px auto;
+      padding: 16px 32px;
+      width: 80%;
+      max-width: 400px;
+      background-color: #ffffff10;
+      color: #ffffff;
+      font-size: 20px;
+      border: 2px solid #ffffff30;
+      border-radius: 12px;
+      backdrop-filter: blur(10px);
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #ffffff20;
+      border-color: #ffffff60;
+      transform: scale(1.05);
+    }
+
+    .rules {
+      display: none;
+      margin: 20px auto;
+      background-color: rgba(255, 255, 255, 0.05);
+      color: #dddddd;
+      padding: 20px;
+      width: 90%;
+      max-width: 600px;
+      text-align: left;
+      border-radius: 12px;
+      border: 1px solid #ffffff20;
+    }
+
+    .rules h2 {
+      color: #ffffff;
+    }
+
+    ol {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 15px;
+    }
+
+    .minecraft-btn-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .minecraft-btn {
+      width: 45%;
+      margin: 0 10px;
+      padding: 12px 20px;
+      background-color: #ffffff10;
+      color: #ffffff;
+      font-size: 18px;
+      border: 2px solid #ffffff30;
+      border-radius: 10px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .minecraft-btn:hover {
+      background-color: #ffffff20;
+      border-color: #ffffff60;
+      transform: scale(1.05);
+    }
+
+    /* Voting Section Styles */
+    .voting-section {
+      margin-top: 30px;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 10px;
+      width: 80%;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .voting-section h2 {
+      color: #ffffff;
+    }
+
+    .vote-option {
+      display: flex;
+      justify-content: center;
+      margin: 10px 0;
+    }
+
+    .vote-option input {
+      margin-right: 10px;
+      accent-color: #4CAF50;
+    }
+
+    .vote-option label {
+      font-size: 18px;
+      color: #ffffff;
+    }
+
+    .vote-button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 18px;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .vote-button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h1>Royal SMP</h1>
+
+  <a class="btn" href="minecraft://?addExternalServer=Royal%20SMP|mc1173345.fmcs.cloud:36289">Add Server</a>
+  <a class="btn" href="minecraft://?addExternalServer=Royal%20SMP|pelican.fi.freemcserver.net:36289">Add Server</a>
+  <a class="btn" href="minecraft://?addExternalServer=Royal%20SMP|65.21.82.29:36289">Add Server</a>
+  <a class="btn" onclick="toggleRules()">Server Rules</a>
+
+  <div class="rules" id="rulesBox">
+    <h2>Royal SMP Rules</h2>
+    <p>To maintain a fair and enjoyable experience for everyone, please follow the rules below:</p>
+    <ol>
+      <li><strong>No Combat Logging:</strong><br>
+        Logging out during combat is not allowed. If you log out mid-fight, you must either:<br>
+        - Forfeit three items from your inventory, or<br>
+        - A trap will be placed at your last logout location.
+      </li>
+      <li><strong>Base Protection:</strong><br>
+        No griefing or stealing from other players' bases.
+      </li>
+      <li><strong>Hacking & Duplication:</strong><br>
+        Hacks or exploits are forbidden. Punishment includes:<br>
+        - 10-day ban,<br>
+        - Return of duped items,<br>
+        - Resource compensation to players.
+      </li>
+    </ol>
+  </div>
+
+  <a class="btn" href="https://freemcserver.net/server/1173345" target="_blank">Start Server</a>
+
+  <!-- Minecraft Buttons (Below Start Server) -->
+  <div class="minecraft-btn-container">
+    <a class="minecraft-btn" href="https://www.mediafire.com/file/9zpmr8l46qb4p9t/minecraft-1-21-72-music.apk/file" target="_blank">Minecraft</a>
+    <a class="minecraft-btn" href="https://www.mediafire.com/file/yti43xz8tqqaa8x/minecraft-1-21-72.apk/file" target="_blank">Minecraft</a>
+  </div>
+
+  <!-- Voting Section -->
+  <div class="voting-section">
+    <h2>Voting For Royal SMP</h2>
+    <form>
+      <div class="vote-option">
+        <input type="radio" id="venomsNinja" name="vote" value="VenomsNinja">
+        <label for="venomsNinja">VenomsNinja</label>
+      </div>
+      <div class="vote-option">
+        <input type="radio" id="notWardenYT" name="vote" value="NOTWARDENYT2331">
+        <label for="notWardenYT">NOTWARDENYT2331</label>
+      </div>
+      <div class="vote-option">
+        <input type="radio" id="atifgamer962" name="vote" value="Atifgamer962">
+        <label for="atifgamer962">Atifgamer962</label>
+      </div>
+      <button type="submit" class="vote-button">Vote</button>
+    </form>
+  </div>
+
+  <script>
+    function toggleRules() {
+      const rules = document.getElementById('rulesBox');
+      rules.style.display = rules.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>
